@@ -1,0 +1,23 @@
+stages:
+  data_ingestion:
+    cmd: python ./data_ingestion.py
+    deps:
+    - ./data_ingestion.py
+    outs:
+    - data
+  data_preprocessing:
+    cmd: python ./data_preprocessing.py
+    deps:
+    - ./data_preprocessing.py
+    - data
+    outs:
+    - preprocessed_data
+    - preprocesser
+  model_building:
+    cmd: python ./model_building.py
+    deps:
+    - ./model_building.py
+    - preprocessed_data
+    - preprocesser
+    outs:
+    - models

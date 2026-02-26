@@ -5,3 +5,7 @@ mlflow.db
 cars.csv
 a.py
 b.py
+/data
+/preprocessed_data
+/models
+/preprocesser
