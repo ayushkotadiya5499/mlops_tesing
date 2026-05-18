@@ -17,7 +17,7 @@ def split_data(df:pd.DataFrame,target_column):
 def model_building(x,y):
 
     # model=RandomForestRegressor(n_estimators=595, max_depth=17, min_samples_split=40)
-    model=RandomForestRegressor(max_depth=190, n_estimators=10, random_state=42)
+    model=RandomForestRegressor(max_depth=290, n_estimators=10, random_state=42)
     model.fit(x,y)
     return model
 
